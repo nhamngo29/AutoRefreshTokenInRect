@@ -69,14 +69,8 @@ export default function Login() {
             validateTrigger="onBlur"
             rules={[
               {
-                validator: (_, value) => {
-                  if (!value) {
-                    // Lỗi: Trường này là bắt buộc
-                    return Promise.reject("Vui lòng nhập tên đăng nhập!");
-                  }
-                  // Thành công: Không có lỗi
-                  return Promise.resolve();
-                },
+                required: true,
+                message: "Vui lòng nhập tên đăng nhập!",
               },
             ]}
           >
@@ -92,6 +86,7 @@ export default function Login() {
             name="password"
             validateTrigger="onBlur"
             rules={[
+              { required: true, message: "Vui lòng nhập mật khẩu!" },
               {
                 validator: (_, value) => {
                   if (!value) {
