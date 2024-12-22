@@ -13,7 +13,7 @@ export default function useRouteElements() {
   }
   const routeElements = useRoutes([
     {
-      path: "",
+      path: "/",
       element: <ProtectedRouted />,
       children: [
         {

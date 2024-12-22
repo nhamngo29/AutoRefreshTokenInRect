@@ -2,7 +2,6 @@ import { createAction, createReducer } from "@reduxjs/toolkit";
 import { getProfilefromLS, getRefreshTokenFormLS } from "../../utils/auth";
 const initialState = {
   isAuthenticated: Boolean(getRefreshTokenFormLS()),
-  setIsAuthenticated: () => null,
   profile: getProfilefromLS(),
   setProfile: () => null,
   reset: () => null,
